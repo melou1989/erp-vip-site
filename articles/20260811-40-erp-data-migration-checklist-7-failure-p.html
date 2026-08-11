@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Data Migration Checklist: 7 Failure Points to Avoid - ERP.vip</title>
+<meta name="description" content="Data migration breaks more ERP projects than software defects. Use this checklist to avoid the common failure points in mapping, cleansing, testing, and cutover.">
+<meta name="keywords" content="ERP data migration,data migration checklist,ERP implementation failure points">
+<link rel="canonical" href="https://erp.vip/articles/20260811-40-erp-data-migration-checklist-7-failure-p.html">
+<meta property="og:title" content="ERP Data Migration Checklist: 7 Failure Points to Avoid">
+<meta property="og:description" content="Data migration breaks more ERP projects than software defects. Use this checklist to avoid the common failure points in mapping, cleansing, testing, and cutover.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP Data Migration Checklist: 7 Failure Points to Avoid",
+  "description": "Data migration breaks more ERP projects than software defects. Use this checklist to avoid the common failure points in mapping, cleansing, testing, and cutover.",
+  "image": ["/static/images/placeholder-guides.svg"],
+  "datePublished": "2026-08-11T23:17:11.322957+00:00",
+  "dateModified": "2026-08-11T23:17:11.322957+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260811-40-erp-data-migration-checklist-7-failure-p.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated August 11, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">GUIDE</span>
+  <h1>ERP Data Migration Checklist: 7 Failure Points to Avoid</h1>
+  <div class="article-meta">
+    PUBLISHED August 11, 2026 · GUIDE / Checklist
+  </div>
+  <img src="/static/images/placeholder-guides.svg" alt="ERP Data Migration Checklist: 7 Failure Points to Avoid" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>The ERP software itself rarely sinks an implementation. More often, the project drowns in data—legacy records that were never cleaned, mappings that made sense only to the old system, and field-level errors that surface a week after go-live. Data migration is where enterprise projects quietly go to die. Here is a checklist built from the failure points that show up repeatedly, written for people who have already seen one of these go sideways.</p>
+    
+    <p>First: assign a data owner before you assign a data team. Every legacy data set needs someone who can say 'this field means that' without checking with three others. In practice, this is the person who has lived in the old system for a decade and knows the workarounds and the junk records. Without that owner, your mapping document becomes a work of fiction. That owner also has to be empowered to kill non-essential data. Most companies discover they don't need 14 years of inactive vendor addresses or transaction history for products discontinued in 2009.</p>
+    
+    <p>Second: audit the source system's data quality before writing the first transformation rule. Run counts, checks, and duplicate detection on every table you plan to move. If your legacy system has 1,000 customers but 4,000 customer records, that's a data problem, not a technical migration problem. The classic failure point is discovering duplicates only during user acceptance testing—when the sales team sees 12 versions of the same account. Clean the data in the source, not in the migration script. Scripts that deduplicate on the fly are hard to validate and even harder to rerun. Third: your mapping document is not a spreadsheet of source-to-target fields. It must include transformation rules, default values, and the business reason for every decision. When a field in the old system is blank, what does that mean? When a date format differs, who decides the interpretation? These decisions need sign-off from the functional leads, not just from the integration consultant. In real projects, the most heated meetings are about the meaning of a blank status field—'does blank mean pending, or does blank mean inactive?' Resolve that before you map.</p>
+    
+    <p>Testing is not a rehearsal; it is the migration. Do not run one big 'test migration' two weeks before go-live and assume it's fine. Run multiple migrations with the actual legacy data, not a subset. Check row counts, control totals, and reference data. Match balances. Every time you run it, document what changed and why. And here's the failure point that catches most teams: test with data that reflects the messy real world, not with clean created data. If your users know they are looking at test data, they will not validate it seriously. Use a sanitized but realistic copy, and tell them 'this is what go-live looks like.'</p>
+    
+    <p>Finally, plan the cutover as a cross-team operation, not an IT task. Data migration always takes longer at the last minute, because that's when people notice the orders that legally cannot be cleared, the tax codes that changed mid-year, and the integration that refused to write a timestamp. Build buffer time into the cutover window. Have a rollback plan that restores the old system to a specific point in time, and decide in advance who can authorize that rollback. If you haven't decided the rollback authority before go-live, you will make that decision at 3 AM under pressure, and that is how the entire company learns about the migration's failure points in an all-hands email.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
