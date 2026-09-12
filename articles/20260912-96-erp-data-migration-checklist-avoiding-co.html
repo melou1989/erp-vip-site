@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Data Migration Checklist: Avoiding Common Failure Points - ERP.vip</title>
+<meta name="description" content="A practical ERP data migration checklist covering chart of accounts mapping, open-item reconciliation, test loads, and the cutover failures that sink go-live.">
+<meta name="keywords" content="ERP data migration checklist,ERP data migration,ERP implementation data migration,data migration failure points">
+<link rel="canonical" href="https://erp.vip/articles/20260912-96-erp-data-migration-checklist-avoiding-co.html">
+<meta property="og:title" content="ERP Data Migration Checklist: Avoiding Common Failure Points">
+<meta property="og:description" content="A practical ERP data migration checklist covering chart of accounts mapping, open-item reconciliation, test loads, and the cutover failures that sink go-live.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP Data Migration Checklist: Avoiding Common Failure Points",
+  "description": "A practical ERP data migration checklist covering chart of accounts mapping, open-item reconciliation, test loads, and the cutover failures that sink go-live.",
+  "image": ["/static/images/placeholder-guides.svg"],
+  "datePublished": "2026-09-12T23:16:56.300488+00:00",
+  "dateModified": "2026-09-12T23:16:56.300488+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260912-96-erp-data-migration-checklist-avoiding-co.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 12, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">GUIDE</span>
+  <h1>ERP Data Migration Checklist: Avoiding Common Failure Points</h1>
+  <div class="article-meta">
+    PUBLISHED September 12, 2026 · GUIDE / Checklist
+  </div>
+  <img src="/static/images/placeholder-guides.svg" alt="ERP Data Migration Checklist: Avoiding Common Failure Points" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>Ask anyone who has survived a bad ERP go-live what actually hurt, and you rarely hear about a misconfigured pricing procedure. You hear about the customer master that went live with 40,000 duplicate ship-to records, the general ledger that wouldn't tie out to the legacy trial balance, or the open purchase orders that arrived in the new system with quantities but no costs. Data migration is the part of the project where the schedule was already tight, the scope was already fuzzy, and the people who own the data were too busy running the business to sit in mapping workshops.</p>
+    
+    <p>The first decision is scope, and it should be made per data object, not for the project as a whole. Companies burn weeks migrating twelve years of closed sales orders into a system nobody will ever query that way. A balance-forward approach — open items and balances only, plus summarized history — is usually the right call for transaction-heavy objects, provided you keep the detail queryable in a proper archive. Not a folder of pipe-delimited files on a consultant's laptop. If tax or audit needs line-level detail from 2019, you need that answer before you decide, not after the archive environment has been decommissioned.</p>
+    
+    <p>Name a business owner for every data object. Customer master goes to sales operations or order management. Item master goes to supply chain. Chart of accounts goes to the controller. Vendor master goes to procurement or AP. IT can write extract queries and load programs all day, but nobody in IT can decide whether "ACME Corp" and "Acme Corporation Inc." are the same customer, or whether a part number with a discontinued flag should be migrated as active. Every migration I've seen go sideways had an unowned object somewhere in the middle of it.</p>
+    
+    <p>Profile the legacy data before you plan the cleansing effort. Look at null rates on required fields, orphaned foreign keys, and free-text fields that have been functioning as unofficial picklists for a decade. The address lines where the state code ended up in the city field. The customer records with no payment terms. The item descriptions that are actually internal part numbers. Cleaning only the records you migrate is a common shortcut, and it fails, because the legacy system stays live in parallel for months and people keep entering garbage into it right up until the freeze.</p>
+    
+    <p>Do not start field mapping while the target chart of accounts and dimensional model are still under debate. This is the single most expensive sequencing mistake in ERP data migration. If finance redesigns the account structure in month six, every mapping decision made in months two through five gets thrown out, and the load programs get rewritten. Lock the target structure, then build an explicit mapping rule for every legacy account value, including the ones nobody can explain. Those go into an exception queue that a human resolves. Defaulting unknowns to a suspense or miscellaneous account is how you end up with a seven-figure balance that nobody can clear.</p>
+    
+    <p>Field-level mapping is the easy part. Value-level mapping is where the work lives: unit of measure conversions, currency translation for entities reporting in different functional currencies, date format collisions, country and state code standardization, status code translation, tax code mapping. Legacy systems are full of Y/N flags, single-character status codes, and three-digit reason codes that map to nothing in the new data model. Someone has to decide what each one becomes, and that decision needs to be documented, version-controlled, and signed off, because you will be asked to explain it again during reconciliation.</p>
+    
+    <p>Build the reconciliation reports before you build the load programs. Open accounts receivable and payable, open purchase orders, on-hand inventory with quantities and costs, fixed assets with accumulated depreciation, work in process. Each of these has to tie back to the legacy trial balance as of the cutover date, at a defined level of granularity. If your reconciliation is "the total matches," you have no reconciliation. You want line-level exception reports that show exactly which records failed, why, and who fixes them. A load that completes without errors and a load that produces correct numbers are two different outcomes.</p>
+    
+    <p>On tooling: the major vendors all ship something. SAP has its migration cockpit, Oracle uses file-based data import and desktop integration across Fusion applications, Microsoft's Dynamics 365 data management framework handles the entity imports, NetSuite has its CSV import assistant, Epicor ships the Data Management Tool, Sage Intacct provides import templates. These work well for standard objects and reasonably well for moderate customization. The moment you introduce complex custom hierarchies, multi-level item structures, or interdependencies the templates don't model, expect to write your own extract-transform-load code. Third-party tools — Syniti, Informatica, Boomi, and similar — earn their keep on profiling, repeatable load scripts, and error management rather than on the initial extraction.</p>
+    
+    <p>Run full test loads with production-like volumes, timed. Three cycles is a floor, not an achievement. A dry run with 500 rows tells you nothing about how the system behaves with two million inventory transactions or how long the AP open-item load actually takes on the hardware you bought. Each cycle should end with the reconciliation reports, not just a completion message. Between cycles, track defect counts by object. If the count isn't falling, you're not fixing root causes, you're patching individual records.</p>
+    
+    <p>The forgotten objects list is depressingly consistent across projects: document attachments and images, approval workflow history, the mapping between legacy users and new employee records, integration endpoints still pointing at legacy identifiers, security roles, and report parity. That last one deserves its own line item. Before go-live, run the same financial statements out of the new system and the old one for a closed period and compare them line by line. If the balance sheet differs by an amount nobody can explain, you are not ready.</p>
+    
+    <p>Cutover itself needs a written decision rule, not a hopeful atmosphere. Define the freeze point, record the exact extract timestamp, stop all posting in the legacy system, and agree in advance what happens if the load fails at 3 a.m. on Sunday. Roll back to legacy and delay, or push forward and fix in flight? Both are legitimate answers, but they need to be chosen by the steering committee before anyone is tired and under pressure. The extract timestamp matters more than people expect — any transaction posted after extraction is a manual entry in the new system, and someone has to own that list.</p>
+    
+    <p>The last item on the checklist is the one most teams drop: master data governance after go-live. You spent months deduplicating customers and standardizing item descriptions. If the same fifteen people keep creating records with the same habits and no validation rules, you will be running this entire exercise again in three years with a larger dataset. Duplicate-prevention rules, required fields, and a review step for new customer and item creation are cheaper than remediation. The checklist that actually works is the one with a person's name next to every line.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

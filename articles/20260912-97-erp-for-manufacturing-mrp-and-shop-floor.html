@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP for Manufacturing: MRP and Shop Floor Realities - ERP.vip</title>
+<meta name="description" content="A practical look at ERP for manufacturing: how MRP, BOMs, routings, capacity, shop floor control, and MES integration actually work in plants.">
+<meta name="keywords" content="ERP for manufacturing,MRP software,shop floor control">
+<link rel="canonical" href="https://erp.vip/articles/20260912-97-erp-for-manufacturing-mrp-and-shop-floor.html">
+<meta property="og:title" content="ERP for Manufacturing: MRP and Shop Floor Realities">
+<meta property="og:description" content="A practical look at ERP for manufacturing: how MRP, BOMs, routings, capacity, shop floor control, and MES integration actually work in plants.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP for Manufacturing: MRP and Shop Floor Realities",
+  "description": "A practical look at ERP for manufacturing: how MRP, BOMs, routings, capacity, shop floor control, and MES integration actually work in plants.",
+  "image": ["/static/images/placeholder-insights.svg"],
+  "datePublished": "2026-09-12T23:16:56.300488+00:00",
+  "dateModified": "2026-09-12T23:16:56.300488+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260912-97-erp-for-manufacturing-mrp-and-shop-floor.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 12, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">INSIGHTS</span>
+  <h1>ERP for Manufacturing: MRP and Shop Floor Realities</h1>
+  <div class="article-meta">
+    PUBLISHED September 12, 2026 · INSIGHTS / Manufacturing ERP
+  </div>
+  <img src="/static/images/placeholder-insights.svg" alt="ERP for Manufacturing: MRP and Shop Floor Realities" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>Most ERP replacements in manufacturing start with a simple complaint: MRP is broken. The planner runs MRP, gets a pile of planned orders, ignores half, and goes back to spreadsheets. The vendor demo shows a clean multi-level BOM and a tidy schedule. The plant has a BOM that hasn't matched the assembly since a revision last quarter.</p>
+    
+    <p>MRP itself is arithmetic. It takes demand from sales orders, forecasts, and safety stock; explodes BOMs; nets inventory and scheduled receipts; applies lead times, lot sizes, scrap, and calendars; then suggests purchase requisitions, work orders, and transfer orders. SAP S/4HANA, Oracle Fusion Cloud Manufacturing, Dynamics 365 Supply Chain Management, NetSuite, Epicor Kinetic, Infor CloudSuite Industrial, QAD Adaptive ERP, and IFS Cloud all do this. The differences show up in how they handle exceptions, planning buckets, firming, and capacity.</p>
+    
+    <p>The dirty secret is that most ERP MRP runs are infinite capacity. They assume work centers have unlimited hours. You get a plan that says every job can run next Tuesday. Finite scheduling needs constraints: machine capacity, labor skills, tooling, setup matrices, and shift calendars. Some ERP suites have embedded finite planning—SAP S/4HANA with PP/DS, Oracle with its manufacturing cloud, Dynamics 365 with Planning Optimization. Others rely on APS add-ons like PlanetTogether, Kinaxis, Siemens Opcenter, or a homegrown scheduling board.</p>
+    
+    <p>BOM and routing data quality matters more than the MRP algorithm. Phantom BOMs, configurable BOMs, effectivity dates, and engineering change orders all have to flow into planning. If a revision isn't effective in the ERP, MRP buys the old part. Routing times—setup, run, queue, move—need to reflect the floor. Stale standards make capacity plans fiction. Scrap factors and yield are often guessed. MRP will happily plan a 95% yield on a process that actually yields 80%.</p>
+    
+    <p>Shop floor control is where ERP meets reality. Work orders release, pick lists print or display, operators scan material, report quantities, and backflush components. Backflushing saves time but hides inventory errors. If a bin count is wrong, backflush turns it into a cost variance and a stockout. Lot and serial tracking add steps; aerospace, medical device, and automotive suppliers cannot skip them. The ERP needs to capture as-built genealogy, not just finished quantity.</p>
+    
+    <p>MES versus ERP is a common boundary argument. ERP owns order management, inventory, procurement, costing, and often quality records. MES owns machine data, OEE, SPC, operator instructions, and real-time dispatching. Plex is one of the few ERP vendors with deep native MES. Others integrate with Rockwell, AVEVA, Siemens, or a specialized MES. The integration path—ISA-95, OPC UA, MQTT, middleware—matters. Double entry on the floor kills adoption. Operators will trust a whiteboard over a system that asks them to type the same number twice.</p>
+    
+    <p>Capacity and scheduling choices depend on the plant type. Job shops need finite scheduling, tooling constraints, and setup optimization. Repetitive manufacturers need rate-based planning, kanban, and backflush. Process manufacturers need co-products, by-products, catch weight, and potency. Discrete assembly needs configurable BOMs and work order travelers. A single ERP may cover all four badly. Buy for the mode you run, not the mode the sales rep shows.</p>
+    
+    <p>Data collection is not just barcode scanners. PLCs, CNCs, scales, and test stands can feed the ERP or MES. OPC UA and MQTT are common. But the first step is process discipline: who scans what, when, and why. If an operator can't find the work order, the ERP is wrong. If a supervisor overrides a schedule without a reason code, planning data gets polluted. Exception messages need owners. MRP action messages—expedite, defer, cancel—should be worked daily, not monthly.</p>
+    
+    <p>Vendor fit is real, but tier labels lie. SAP and Oracle fit complex, multi-plant, global manufacturers with deep pockets and IT staff. Dynamics 365 fits Microsoft-centric mid-market and larger operations. Epicor, Infor, QAD, and SYSPRO serve mid-market manufacturers with mixed-mode needs. Plex and Rootstock target specific segments—automotive and Salesforce-based operations. NetSuite handles lighter assembly and project manufacturing. None of that matters if the bill of materials is wrong. ERP won't fix a plant that can't count inventory. The harder half is shop floor adoption. If operators don't trust the work order, they'll keep the whiteboard.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
