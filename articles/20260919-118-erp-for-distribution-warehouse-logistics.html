@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP for Distribution: Warehouse & Logistics Integration Guide - ERP.vip</title>
+<meta name="description" content="Where ERP ends and WMS begins: how distributors should scope warehouse, EDI, carrier, and automation integration before signing an ERP contract.">
+<meta name="keywords" content="ERP for distribution,ERP WMS integration,warehouse management integration,distribution ERP software">
+<link rel="canonical" href="https://erp.vip/articles/20260919-118-erp-for-distribution-warehouse-logistics.html">
+<meta property="og:title" content="ERP for Distribution: Warehouse & Logistics Integration Guide">
+<meta property="og:description" content="Where ERP ends and WMS begins: how distributors should scope warehouse, EDI, carrier, and automation integration before signing an ERP contract.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP for Distribution: Warehouse \u0026 Logistics Integration Guide",
+  "description": "Where ERP ends and WMS begins: how distributors should scope warehouse, EDI, carrier, and automation integration before signing an ERP contract.",
+  "image": ["/static/images/placeholder-insights.svg"],
+  "datePublished": "2026-09-19T23:16:51.404332+00:00",
+  "dateModified": "2026-09-19T23:16:51.404332+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260919-118-erp-for-distribution-warehouse-logistics.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 19, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">INSIGHTS</span>
+  <h1>ERP for Distribution: Warehouse & Logistics Integration Guide</h1>
+  <div class="article-meta">
+    PUBLISHED September 19, 2026 · INSIGHTS / Integration Strategy
+  </div>
+  <img src="/static/images/placeholder-insights.svg" alt="ERP for Distribution: Warehouse & Logistics Integration Guide" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>Most distribution ERP projects go sideways at the same place: the dock door. The finance side of the implementation — chart of accounts, order-to-cash, purchasing — usually gets nailed down in the first round of workshops. Warehouse execution gets treated as a module checkbox. Then the first physical inventory count comes back short and everyone starts pointing at the WMS.</p>
+    
+    <p>The useful way to frame this is a division of ownership. The ERP is the system of record: it holds the item master, the standard or average cost, the purchase order, the customer order, the GL entry. The warehouse management layer is the system of execution: which bin, which license plate, which picker, which route through the aisle. Both need to agree on quantity. Only one of them should be allowed to decide what a quantity costs.</p>
+    
+    <p>That boundary is where implementations actually break. Take a pallet of 48 cases received against a PO line ordered in eaches. The WMS breaks the pallet, puts away 40 cases in bulk and 8 in forward pick, and maybe opens one case. Which system holds the unit-of-measure conversion? Where does the lot number live if the supplier's lot is only printed on the pallet label? What posts to inventory when the case is broken? If nobody answers those questions during design, the answer becomes 'whoever's batch job ran last,' and your perpetual inventory stops being perpetual.</p>
+    
+    <p>Retail compliance is the second place it hurts. A 940 warehouse shipping order arrives, the DC picks and packs, and the 856 ASN with GS1-128 carton labels has to be out the door before the truck leaves — sometimes before the pallet is even staged. If your ERP generates the ASN but your WMS owns the carton contents, you have two systems racing to publish the same document. Retailer chargebacks for a late or wrong ASN dwarf whatever you saved by not funding the integration properly.</p>
+    
+    <p>Shipping is a third boundary. Small-parcel rate shopping, manifesting, and label printing usually live outside both the ERP and the WMS in a multi-carrier platform such as ProShip, ShipStation, or a direct carrier API. The ERP wants the freight cost for the customer invoice. The WMS wants the carton weight and dimensions. When the pack station keys weight into one system and the label prints from another, you end up paying dimensional weight the system never captured.</p>
+    
+    <p>When is the ERP vendor's own warehouse module enough? Honestly, more often than the WMS salespeople will admit. A single-site distributor with a few thousand SKUs, pick-to-cart or pick-to-pallet, manual putaway, and no conveyor can run fine on the warehouse functionality that ships with Epicor Prophet 21, Infor CloudSuite Distribution, Dynamics 365 Supply Chain Management, or NetSuite. The math changes when you add a second DC, wave or zone picking, 3PL billing, lot and serial traceability for regulated goods, or anything mechanical that moves a tote without a human.</p>
+    
+    <p>Integration middleware is the line item that gets cut first. Real-time API calls sound better than nightly batch right up until the Wi-Fi drops in aisle 12 and the RF devices have nowhere to queue transactions. Ask specifically: does the handheld cache scans offline and replay them, or does the picker stand there waiting? What happens to an order confirmation when the ERP is down for a patch? Who owns the error queue at 6 a.m. on a Monday, and can that person actually read it?</p>
+    
+    <p>Once conveyors, put walls, ASRS, or AMRs show up, the WMS stops being the bottom of the stack. It talks to a warehouse control layer, which talks to PLCs and robot fleets. Keep the ERP out of that conversation entirely — no ERP should be issuing tasks to an AutoStore port. The practical question is whether your WMS vendor already has a certified interface to the automation you're buying, or whether you're funding custom development on both sides.</p>
+    
+    <p>The distribution ERP market is unusually fragmented, which is both good and bad. Epicor sells Prophet 21 for general wholesale distribution and Eclipse for electrical, plumbing, and HVAC supply houses. Infor's CloudSuite Distribution descends from SX.e and M3. Microsoft, NetSuite, Acumatica, SYSPRO, and Sage X3 all offer warehouse functionality, sometimes augmented by ISV products. On the best-of-breed side, Manhattan Associates, Blue Yonder, Körber, and Tecsys sell WMS that will run circles around any ERP module — at a price and complexity level that only makes sense above a certain throughput. Pricing varies enormously by site count, user count, transaction volume, and licensing model.</p>
+    
+    <p>Whatever you choose, pilot it on your own bad data. Take the SKU with the ugliest UOM structure, the customer with the most EDI quirks, and the week after a holiday when the DC is already behind. Watch what the system does when a receipt is short-shipped, when a picker can't find a case, and when a customer changes an order after the wave has dropped. Vendors demo clean. Your warehouse is not clean.</p>
+    
+    <p>One more thing worth writing into the contract: a plain statement of which system is authoritative for inventory quantity, lot and serial, and cost — and what happens procedurally when the two disagree. Distributors who skip that sentence spend the next five years reconciling two versions of the truth.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
