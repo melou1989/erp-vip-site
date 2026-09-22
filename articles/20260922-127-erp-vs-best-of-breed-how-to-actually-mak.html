@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP vs Best-of-Breed: How to Actually Make the Call - ERP.vip</title>
+<meta name="description" content="A practical way to decide what belongs in your ERP core and what should stay a specialist point solution — plus the integration costs nobody budgets for.">
+<meta name="keywords" content="ERP vs best-of-breed,composable ERP,point solutions vs ERP,ERP integration strategy">
+<link rel="canonical" href="https://erp.vip/articles/20260922-127-erp-vs-best-of-breed-how-to-actually-mak.html">
+<meta property="og:title" content="ERP vs Best-of-Breed: How to Actually Make the Call">
+<meta property="og:description" content="A practical way to decide what belongs in your ERP core and what should stay a specialist point solution — plus the integration costs nobody budgets for.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP vs Best-of-Breed: How to Actually Make the Call",
+  "description": "A practical way to decide what belongs in your ERP core and what should stay a specialist point solution \u2014 plus the integration costs nobody budgets for.",
+  "image": ["/static/images/placeholder-comparisons.svg"],
+  "datePublished": "2026-09-22T23:16:50.257519+00:00",
+  "dateModified": "2026-09-22T23:16:50.257519+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260922-127-erp-vs-best-of-breed-how-to-actually-mak.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 22, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">COMPARISON</span>
+  <h1>ERP vs Best-of-Breed: How to Actually Make the Call</h1>
+  <div class="article-meta">
+    PUBLISHED September 22, 2026 · COMPARISON / Comparison
+  </div>
+  <img src="/static/images/placeholder-comparisons.svg" alt="ERP vs Best-of-Breed: How to Actually Make the Call" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>The question lands in a steering committee as a binary: replace the ERP, or buy the best tool for each job. Almost nobody actually runs either extreme. Walk into a mid-market distributor and you'll find NetSuite or Acumatica holding the general ledger, Salesforce owning the pipeline, a standalone WMS running the warehouse, Avalara calculating tax, and a planning tool that finance bought two years ago. The argument isn't suite versus best-of-breed. It's which system owns which record, and who is responsible when the answer changes.</p>
+    
+    <p>A suite earns its keep in a boring, underrated way: one data model. When the sales order, the invoice, and the journal entry are the same object viewed from different angles, month-end close is a report rather than a reconciliation project. Your chart of accounts is defined once. Credit limits, dunning, revenue schedules, and intercompany eliminations all reference the same customer and entity records. That's not glamorous, but it's the reason companies put up with modules they'd never have bought on their own.</p>
+    
+    <p>The cost shows up in the module you care most about. Suite vendors build broad, and breadth means depth gets sacrificed somewhere — usually in manufacturing scheduling, warehouse execution, field service, or demand planning. You then choose between configuring around the gap, changing how you work, or paying a partner to build an extension. That extension becomes custom code with a lifecycle, an owner, and a tendency to break at upgrade time. I've seen companies spend more maintaining three suite extensions than the specialist licenses would have cost.</p>
+    
+    <p>Best-of-breed exists because some problems are deep enough to fund a dedicated product team. Kinaxis and Blue Yonder in supply chain planning, Manhattan in warehouse management, Salesforce in CRM, Workday in HCM, Coupa in spend management. These products beat the equivalent ERP module on the workflow that matters, and they iterate faster than a suite release cycle. If the capability is what customers pay you for, that gap is worth real money.</p>
+    
+    <p>Then comes the invoice nobody forecast. Integration middleware — Boomi, MuleSoft, Celigo, Workato, whatever you standardize on — carries its own licensing, and someone has to own the maps. Not build them once. Own them. Pricing changes on either side break mappings. API rate limits throttle bulk syncs. Error queues fill up quietly over a holiday weekend and somebody discovers it during close. Middleware is not a one-time project; it's a permanent headcount line.</p>
+    
+    <p>Master data is where these architectures actually fail. If the CRM owns customer creation and the ERP owns credit, you get accounts that can be quoted but not invoiced. If the PIM owns the item and the WMS owns the bin, you get orders that pick against a discontinued SKU. Someone has to be authoritative for customer, item, vendor, and employee, and everyone else has to subscribe. Write that down before you sign anything. Most integration disasters I've watched were master data disputes wearing a technical costume.</p>
+    
+    <p>Latency gets underestimated constantly. A nightly batch is perfectly fine for pushing journal entries into the GL. It is not fine for available-to-promise, real-time pricing, or dispatching a technician. If two systems need to agree within seconds, you're building event-driven integration with retry logic and idempotency handling — a different cost bracket from a scheduled file drop. Ask what the business does if the sync is four hours stale. If the answer is 'nothing good,' you've found a hard requirement.</p>
+    
+    <p>Auditors have opinions about this too. The ERP is the book of record, and if revenue lives in a subscription billing system while the GL sits somewhere else, you now need controls over that interface: evidence of completeness, evidence of accuracy, and testing every year. That's not a reason to avoid best-of-breed, but it's a real annual cost that rarely appears in the business case. Companies with SOX obligations feel this more than private ones, and they should budget for it explicitly.</p>
+    
+    <p>Vendor continuity cuts both ways. Point solutions get acquired, taken private, repriced, or repositioned upmarket — Anaplan, Coupa, and a long list of smaller tuck-ins have all been through it. Suite vendors discontinue modules too, just more slowly and with more notice. Before you buy, ask what your leverage looks like in year four: how much of your data and configuration is portable, what the exit cost is, and whether the product roadmap still points at your segment. A cheap license on a drifting roadmap is expensive.</p>
+    
+    <p>'Composable ERP' has become marketing for 'our API is decent.' The honest test is narrower: can you replace one capability without touching the others? If swapping your WMS means re-testing order-to-cash, the composability is theoretical. True composability requires clean domain boundaries and a contract for how domains talk, which is an architectural decision you make, not a feature you buy.</p>
+    
+    <p>Here's the split I'd defend for most mid-market and lower-enterprise companies. Keep the core tight: general ledger, AP and AR, fixed assets, tax determination, consolidation, procurement-to-pay, and the entity structure. Buy best-of-breed where the work is genuinely differentiated, changes fast, or has a specialist market with real competition. That's core plus edge, and it's where most functioning architectures land whether or not anyone named it that way.</p>
+    
+    <p>The differentiation test is simple enough to apply in a meeting. Is this capability something customers choose you for, or something a ten percent improvement would move in gross margin? Then buy the specialist and integrate it properly. Is it table stakes — expense reports, tax filing, document storage, basic time tracking? Take the suite's adequate module, accept that it's merely adequate, and spend your integration budget on something that matters.</p>
+    
+    <p>Before signing, get answers to a handful of questions in writing. Who owns each master record? What happens to close if the integration fails on day three of the month? Can you recruit people who know both systems, or are you training everyone from scratch? What does it cost to leave the point solution in three years? How many legal entities and currencies are in scope, and does the answer change the design? Vague answers here are the leading indicator of a difficult program.</p>
+    
+    <p>Everyone in the room has an incentive. Suite vendors sell the whole stack because that's their model. Point solution vendors sell focus because that's theirs. Large systems integrators tend to favor the suite, since the program is bigger and the change management revenue is longer. Boutique firms tend to favor best-of-breed, because specialization keeps them engaged. None of that makes them wrong. It just means you should discount the recommendation by whoever is making it.</p>
+    
+    <p>Pick the system of record for each domain, write it down, and attach a person's name to every interface between them. Most of the ERP versus best-of-breed decision disappears once those two things are settled — and the organizations that struggle are usually the ones that skipped straight to product demos.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
