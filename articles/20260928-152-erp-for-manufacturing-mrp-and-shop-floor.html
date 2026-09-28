@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP for Manufacturing: MRP and Shop Floor Buying Guide - ERP.vip</title>
+<meta name="description" content="MRP is where manufacturing ERP projects succeed or fail. What to test in BOM accuracy, scheduling, and shop floor data collection before you sign.">
+<meta name="keywords" content="manufacturing ERP,MRP software,shop floor ERP,discrete manufacturing ERP,ERP selection">
+<link rel="canonical" href="https://erp.vip/articles/20260928-152-erp-for-manufacturing-mrp-and-shop-floor.html">
+<meta property="og:title" content="ERP for Manufacturing: MRP and Shop Floor Buying Guide">
+<meta property="og:description" content="MRP is where manufacturing ERP projects succeed or fail. What to test in BOM accuracy, scheduling, and shop floor data collection before you sign.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP for Manufacturing: MRP and Shop Floor Buying Guide",
+  "description": "MRP is where manufacturing ERP projects succeed or fail. What to test in BOM accuracy, scheduling, and shop floor data collection before you sign.",
+  "image": ["/static/images/placeholder-insights.svg"],
+  "datePublished": "2026-09-28T23:16:44.583136+00:00",
+  "dateModified": "2026-09-28T23:16:44.583136+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260928-152-erp-for-manufacturing-mrp-and-shop-floor.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 28, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">INSIGHTS</span>
+  <h1>ERP for Manufacturing: MRP and Shop Floor Buying Guide</h1>
+  <div class="article-meta">
+    PUBLISHED September 28, 2026 · INSIGHTS / Buying Guide
+  </div>
+  <img src="/static/images/placeholder-insights.svg" alt="ERP for Manufacturing: MRP and Shop Floor Buying Guide" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>Manufacturers rarely buy ERP for the general ledger. They buy it because MRP is supposed to tell them what to make, what to buy, and when, and because the shop floor needs a work order that matches what is actually on the machine. Those two things are also where implementations go sideways. I have watched companies buy a platform, go live, and still plan the week in a spreadsheet built by hand, because nobody trusted the MRP output enough to act on it.</p>
+    
+    <p>None of that is a software defect. It is a data and discipline problem that the software simply exposes.</p>
+    
+    <p>MRP is arithmetic. It explodes demand through bills of material, nets against on-hand and scheduled receipts, offsets by lead time, and produces planned orders. What it cannot know is that your BOM still lists a component that was replaced last spring, or that the lead time on a purchased part is a number someone typed in during the previous implementation. Garbage in, garbage out is a cliche precisely because this is the whole ballgame.</p>
+    
+    <p>Two fields quietly wreck more plans than anything else: scrap percentage and lot sizing. If a work center really yields 94 percent on a casting but the routing says 99, MRP under-plans raw material forever, and the shortage shows up on the floor rather than in the report. Fixed lot sizes and supplier minimums need to be modeled honestly, including rounding and order multiples, or the buy plan fills up with suggestions your purchasing team learns to ignore.</p>
+    
+    <p>Ask how MRP performs on your data, not the vendor demo database. Item counts in the tens of thousands, deep multi-level BOMs, and a twelve-month horizon change the conversation. A full regeneration that runs for hours pushes planners toward net change runs, and net change runs depend on every transaction posting correctly. Ask whether the system supports planning fences, firm planned orders, and a sandbox copy of the plan so a planner can test a change without committing it.</p>
+    
+    <p>Scheduling is where vendor claims and product reality diverge most. Infinite capacity planning is the default almost everywhere: the system shows load against a work center and leaves bottleneck resolution to a human. Finite capacity scheduling exists in some suites and in bolt-on tools, but it needs accurate routings, realistic setup and run times, shift calendars that reflect how you actually run overtime, and agreement on which resource is the constraint. In a high-mix job shop with constant expediting, an experienced scheduler will out-plan the algorithm most days. Buy scheduling only if you can feed it.</p>
+    
+    <p>The shop floor is where data quality comes back around. Backflushing components at operation completion is convenient and wrong whenever scrap, substitutions, or partial completions are normal. Issue-based consumption is accurate and adds a transaction to somebody's day. Either way, the ERP knows only what a human or a scanner tells it. If operators report labor at end of shift from memory, your cost variances and capacity numbers are fiction, and you will spend years arguing about why.</p>
+    
+    <p>Draw the ERP and MES boundary before you buy, because vendors blur it. ERP handles work order release, dispatch lists, material issue, labor and completion transactions, and cost roll-up. Machine-level data such as cycle counts, downtime reasons, OEE, and in-process SPC usually comes from MES, SCADA, or a historian, talking to equipment over OPC UA, MTConnect, or a vendor-specific protocol. A few products were built with the plant floor in view from the start; most integrate. Ask which protocol, which gateway, and who owns that integration in the statement of work.</p>
+    
+    <p>Costing follows from all of it. Standard cost with variance analysis is the norm in discrete manufacturing; process and hybrid operations often need actual or average costing with co-products and by-products. The mechanics matter less than the timing. If transactions post a week late, WIP is wrong, variances land in the wrong period, and month-end close becomes a reconciliation project. Decide up front whether you backflush at completion or issue at start, and whether that matches how material physically moves through the plant.</p>
+    
+    <p>Traceability should drive module selection more than it usually does. Lot and serial control, nonconformance workflows, certificate of analysis generation, and the ability to walk backward from a finished good to a supplier heat number are the difference between a two-day recall and a two-month one. In medical devices, aerospace, or automotive, your customers and your registrar will audit those paths, and a report somebody builds in Excel after go-live will not survive the audit.</p>
+    
+    <p>The vendor field splits along manufacturing mode more than company size. Epicor, Infor CloudSuite Industrial, and Global Shop Solutions have deep roots in job shops and make-to-order work. Plex and the DELMIAworks line lean toward automotive and repetitive production with shop floor data collection built in. SAP S/4HANA, Oracle Fusion, and Dynamics 365 Supply Chain Management carry serious production planning depth but expect disciplined master data and often a partner to configure it. Acumatica, Rootstock, NetSuite, and Odoo serve lighter or mid-market needs with varying MRP depth. Pricing varies significantly by vendor, user count, and deployment model, and the license is rarely the largest line item.</p>
+    
+    <p>So let the demo be boring. Hand the vendor your BOMs, your routings, and a month of real demand, then watch them run MRP and release a work order to a terminal. Ask for a reference customer who makes something similar at similar volume and BOM depth, and ask that reference what they still do by hand. The answer tells you more about fit than any feature checklist.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

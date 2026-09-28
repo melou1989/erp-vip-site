@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Data Migration Checklist: Avoid Common Failure Points - ERP.vip</title>
+<meta name="description" content="ERP data migration checklist from an implementation veteran: profile source data, map master records, test reconciliation, avoid cutover disasters.">
+<meta name="keywords" content="ERP data migration,ERP implementation checklist,data migration failure points,master data management,ERP cutover">
+<link rel="canonical" href="https://erp.vip/articles/20260928-151-erp-data-migration-checklist-avoid-commo.html">
+<meta property="og:title" content="ERP Data Migration Checklist: Avoid Common Failure Points">
+<meta property="og:description" content="ERP data migration checklist from an implementation veteran: profile source data, map master records, test reconciliation, avoid cutover disasters.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP Data Migration Checklist: Avoid Common Failure Points",
+  "description": "ERP data migration checklist from an implementation veteran: profile source data, map master records, test reconciliation, avoid cutover disasters.",
+  "image": ["/static/images/placeholder-guides.svg"],
+  "datePublished": "2026-09-28T23:16:44.583136+00:00",
+  "dateModified": "2026-09-28T23:16:44.583136+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20260928-151-erp-data-migration-checklist-avoid-commo.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated September 28, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">GUIDE</span>
+  <h1>ERP Data Migration Checklist: Avoid Common Failure Points</h1>
+  <div class="article-meta">
+    PUBLISHED September 28, 2026 · GUIDE / Checklist
+  </div>
+  <img src="/static/images/placeholder-guides.svg" alt="ERP Data Migration Checklist: Avoid Common Failure Points" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>Data migration is the part of ERP projects that people underestimate until it's too late. I've watched go-lives slip for months because someone assumed the legacy system's customer list was clean. It wasn't. Start with a simple rule: the business owns the data, IT owns the pipes. If your checklist begins with 'extract everything,' you're already in trouble. Not all data deserves a new home. Some should be archived, some should be left to die with the old system, and some needs to be fixed before it ever touches the new ERP.</p>
+    
+    <p>Profile your source systems before you write a single mapping. Run reports for duplicate records, missing mandatory fields, orphaned child records, and inconsistent formats. A vendor master with three spellings of the same company will break your procurement workflows. I've seen finance teams spend weeks reconciling accounts payable because legacy data had payment terms as free text. Decide early what 'good enough' looks like for each data domain. Perfect data is a myth. Usable data is the goal.</p>
+    
+    <p>Master data relationships are where migrations quietly fall apart. You can't load sales orders without customers, and you can't load customers without their addresses and contacts. Load order matters: chart of accounts, then customers, vendors, items, then transactions. If you skip that sequence, you'll get foreign key errors or, worse, silent data corruption. Map the hierarchies—cost centers to departments, items to product lines—and validate them with the people who actually use that data daily.</p>
+    
+    <p>Testing isn't just 'did the records land?' It's 'do the business processes still work?' Reconcile total AR aging, inventory valuation, and GL balances between old and new systems. Run a full month-end close in the new ERP with migrated data before you go live. I've seen projects skip reconciliation because the go-live date was fixed. That's how you end up with a CFO who doesn't trust the numbers for a year. Build reconciliation reports before you need them.</p>
+    
+    <p>Cutover is a data migration project's final exam. Freeze the legacy system, extract the final delta, load it, and validate. Have a rollback plan that includes the data, not just the software. One common failure: no one owns data governance after go-live. Who fixes a duplicate vendor six months later? If the answer is 'the ERP team,' you've set up a permanent bottleneck. Assign data stewards by domain before cutover, not after.</p>
+    
+    <p>Honestly, the checklist itself won't save you. The discipline to follow it will. If you can't name the person accountable for customer data, item data, and financial data, stop. You're not ready to migrate. The best ERP implementations treat data migration as a series of small, boring, verified steps—not a heroic weekend. Boring is good. Boring means the numbers match.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
