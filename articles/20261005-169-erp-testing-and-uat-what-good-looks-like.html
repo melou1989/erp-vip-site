@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Testing and UAT: What Good Looks Like Before Go-Live - ERP.vip</title>
+<meta name="description" content="UAT sign-off rarely means the system works. Here's how IT and finance leaders can tell real ERP testing from script-clicking theater before go-live.">
+<meta name="keywords" content="ERP testing,UAT,ERP user acceptance testing,ERP test scripts,ERP go-live readiness">
+<link rel="canonical" href="https://erp.vip/articles/20261005-169-erp-testing-and-uat-what-good-looks-like.html">
+<meta property="og:title" content="ERP Testing and UAT: What Good Looks Like Before Go-Live">
+<meta property="og:description" content="UAT sign-off rarely means the system works. Here's how IT and finance leaders can tell real ERP testing from script-clicking theater before go-live.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP Testing and UAT: What Good Looks Like Before Go-Live",
+  "description": "UAT sign-off rarely means the system works. Here\u0027s how IT and finance leaders can tell real ERP testing from script-clicking theater before go-live.",
+  "image": ["/static/images/placeholder-guides.svg"],
+  "datePublished": "2026-10-05T23:16:58.076769+00:00",
+  "dateModified": "2026-10-05T23:16:58.076769+00:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ERP.vip",
+    "url": "https://erp.vip"
+  },
+  "mainEntityOfPage": "https://erp.vip/articles/20261005-169-erp-testing-and-uat-what-good-looks-like.html"
+}
+</script>
+
+</head>
+<body>
+
+<div class="sale-banner">
+  <div class="wrap">
+    <span class="tag">DOMAIN FOR SALE</span>
+    <span><b>ERP.vip</b> — Premium ERP industry domain, actively growing content & traffic</span>
+    <a href="mailto:sale@erp.vip">sale@erp.vip</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand">
+      <a href="/"><h1>ERP.vip</h1></a>
+      <span class="en">ERP News · Comparisons · Guides</span>
+    </div>
+    <div class="date-line">Updated October 05, 2026</div>
+  </div>
+</header>
+
+<nav class="cat-nav">
+  <div class="wrap">
+    <a href="/" class="">Home</a>
+    <a href="/category/news/" class="">ERP News</a>
+    <a href="/category/comparisons/" class="">Comparisons</a>
+    <a href="/category/guides/" class="">Implementation Guides</a>
+    <a href="/category/insights/" class="">Industry Insights</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<article class="article-page">
+  <span class="badge copper">GUIDE</span>
+  <h1>ERP Testing and UAT: What Good Looks Like Before Go-Live</h1>
+  <div class="article-meta">
+    PUBLISHED October 05, 2026 · GUIDE / Testing & UAT
+  </div>
+  <img src="/static/images/placeholder-guides.svg" alt="ERP Testing and UAT: What Good Looks Like Before Go-Live" style="border-radius:10px;margin-bottom:20px;">
+  <div class="article-body">
+    
+    <p>The sign-off sheet said 96% of test scripts passed. Three weeks later the warehouse couldn't ship a partial pallet, the tax engine was calculating the wrong jurisdiction on drop-ship orders, and nobody could explain why the AP aging report didn't tie to the subledger. That gap — between a green dashboard and a working business — is the whole story of ERP testing.</p>
+    
+    <p>Start by separating two things that get blended together in project plans. Quality assurance asks whether the system does what the specification and configuration say it should. UAT asks whether the business can actually run on it. Different people, different data, different pass criteria. When the systems integrator writes the scripts, executes them in a sandbox, and hands you a signature page, that's QA wearing a UAT badge. It verifies the software. It doesn't verify your month-end, your pricing exceptions, or your credit hold logic.</p>
+    
+    <p>The testing ladder is longer than most schedules admit: unit, integration, system, regression, performance, security, data migration validation, user acceptance, and a cutover rehearsal. Projects consistently do the middle of that list well and skip both ends. Unit and integration testing are engineering work. The ends — migration reconciliation and cutover — are where go-lives actually fail.</p>
+    
+    <p>Good test scripts come from a process inventory, not a screen list. Every process in scope should have at least one end-to-end scenario that crosses modules. Order-to-cash, for example, touches CRM, pricing, credit management, inventory allocation, pick-pack-ship, billing, revenue recognition, and the general ledger. A script that reads "Enter a sales order and save" tests a form. It won't catch the fact that a customer on credit hold can still have an order released by a fulfilment user with the wrong role assignment.</p>
+    
+    <p>Who writes and executes matters more than what tool you use. Business process owners should define and validate the scenarios; super users should execute them. That sounds obvious and it's routinely skipped because the people who know the process best are the ones you can least afford to pull off the floor. Protect their time explicitly — backfill their day job, schedule testing windows as real calendar commitments, and expect that someone still doing their regular work will give UAT twenty distracted minutes a day. That's not testing, it's browsing.</p>
+    
+    <p>Methodology shapes the testing calendar more than most buyers expect. SAP Activate's fit-to-standard approach runs live process walkthroughs in a configured system instead of paper blueprinting, which pulls validation earlier and makes testing continuous rather than a phase at the end. Oracle-led and legacy waterfall programmes lean on conference room pilots and scripted cycles. Neither approach is wrong, but if you're doing fit-to-standard, capture the outcomes as test evidence. "We covered that in the workshop" is not traceable, and when a defect surfaces in month three you'll want to know what was actually demonstrated and who agreed to it.</p>
+    
+    <p>Test data is the quiet killer. Sandboxes are usually populated with a tidy subset built to make the demo look good: one customer, one vendor, one item, one currency. Production looks nothing like that. You need duplicate customer masters, blocked vendors, foreign currency invoices, partial receipts, returns, multi-plant sourcing, intercompany transactions, and historical open items. If your test data can't reproduce the mess, your pass rate is measuring the sandbox, not the system.</p>
+    
+    <p>Third-party integration testing gets under-scoped constantly. Bank payment files, tax engines, EDI 850 and 856 documents, carrier label generation, expense feeds, payroll interfaces, CRM sync — each one is a project with its own test window, its own contacts, and its own refusal to be tested on your schedule. The mapping document being signed is not the same as a file arriving, parsing, posting, and reconciling end to end with a real counterparty. Push for at least one live-format exchange with each external party before cutover.</p>
+    
+    <p>Data migration testing is not a single load. It's mock loads, reconciliation reports, a delta load, and probably a second rehearsal, each one reviewed by the people who own the numbers. Record counts match, balances tie to the legacy trial balance, open AR and AP age correctly, fixed asset registers agree, inventory quantities reconcile by location. If the controller hasn't signed the reconciliation, the migration is untested no matter what the load log says.</p>
+    
+    <p>Environment management will bite you. Most programmes run out of sandboxes long before they run out of test cases, and every refresh wipes whatever hand-built data the team was relying on. Sort out which configuration sits in which instance, how often each refreshes, how PII gets masked, and how test evidence survives a refresh. A defect reproduced in a box that doesn't match production is a day of argument you don't get back.</p>
+    
+    <p>Defect triage deserves a standing weekly meeting with the business in the room, not just the project manager. Severity is technical impact; priority is business impact, and they diverge. A cosmetic misalignment on a customer-facing invoice can outrank a system error on an internal report. Deferred defects need a named owner and a target release, not a shared spreadsheet that everyone stops opening after go-live.</p>
+    
+    <p>Cloud release cadences have made manual regression untenable. Oracle pushes quarterly updates, Microsoft releases Dynamics 365 twice a year, Workday twice a year. A regression suite of several hundred scripts cannot be re-run by hand before every update by people who also have jobs. This is the strongest argument for automation you'll ever have. Microsoft's RSAT, Tricentis Tosca, Worksoft, Panaya, and OpenText ALM all exist for this reason. Automate the stable, high-volume, end-to-end checks; keep humans on judgement calls and exception handling, which automation is bad at.</p>
+    
+    <p>Write your exit criteria before testing begins, not during the last week when everyone is negotiating. Something like: all critical and high-severity defects closed, every priority-one business process executed and passed by a business user, no open defects touching statutory or financial reporting, migration reconciliations signed by their process owners. Notice what's absent — a percentage of scripts passed. A 95% pass rate is meaningless if the 5% includes payroll.</p>
+    
+    <p>What good actually looks like is unglamorous. A business process owner who says "I signed because I ran my own month-end inside the system and it closed," with the evidence and the defect log attached. A test lead who can tell you the defect escape rate from the last go-live, not just the pass rate. And a programme that can answer one question without flinching: who executed the scripts, and were they the people who will have to live with the result?</p>
+    
+    <p>Testing is usually the first line item cut when a schedule slips. If you're the executive sponsoring the programme, ask for that evidence early and ask for it in plain language. The signature on the UAT document is worth exactly as much as the person who put it there.</p>
+    
+  </div>
+  <div class="article-source">
+    This article was researched and drafted with AI assistance, based on publicly available information.
+    If you spot an inaccuracy, please contact <a href="mailto:sale@erp.vip">sale@erp.vip</a>.
+    
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 ERP.vip — Independent ERP industry coverage. Content assisted by AI, edited for accuracy.</div>
+    <div>Domain inquiries: <a href="mailto:sale@erp.vip">sale@erp.vip</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
